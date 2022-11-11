@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class contact extends Model
 {
     use HasFactory;
-    protected $fliable = [
+    protected $fillable = [
         'siswa_id',
         'jenis_contact_id',
         'deskripsi'

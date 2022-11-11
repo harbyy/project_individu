@@ -1,6 +1,6 @@
 @extends('layout.admin')
 @section('title', 'editSiswa')
-@section('content-title','editSiswa')
+@section('content-title','Edit Siswa')
 @section('content')
 <div class="row">
         <div class="col-lg-12">

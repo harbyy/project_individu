@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\siswaController;
 use App\Http\Controllers\projectController;
@@ -50,6 +51,12 @@ Route::middleware('auth')->group(function(){
     Route::resource('masterProject', projectController::class);
     Route::resource('masterContact', contactController::class);
     Route::post('logout', [LoginController::class, 'logout']);
+    Route::resource('masterContact', ContactController::class);
+    Route::get('/masterContact/create/{id}', [ContactController::class, 'create']);
+    Route::get('/createJenis', [ContactController::class, 'tambahjenisview']);
+    Route::post('/createJenis/store', [ContactController::class, 'tambahjenis']);
+    Route::post('/masterContact/store/{id}', [ContactController::class, 'store']);
+    Route::post('/masterContact/hapus/{id}', [ContactController::class, 'hapus']);
 });
 
 //guest
